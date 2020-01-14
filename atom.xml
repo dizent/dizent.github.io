@@ -5,9 +5,9 @@
   <subtitle>千头万绪君不知,来年柳绿故人迟.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://blog.dizent.cn/"/>
+  <link href="http://zone.dizent.cn/"/>
   <updated>2020-01-02T03:38:20.801Z</updated>
-  <id>http://blog.dizent.cn/</id>
+  <id>http://zone.dizent.cn/</id>
   
   <author>
     <name>Dizent</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>简单实现内网穿透</title>
-    <link href="http://blog.dizent.cn/2019/12/16/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
-    <id>http://blog.dizent.cn/2019/12/16/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</id>
+    <link href="http://zone.dizent.cn/2019/12/16/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    <id>http://zone.dizent.cn/2019/12/16/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</id>
     <published>2019-12-16T01:15:00.000Z</published>
     <updated>2020-01-02T03:38:20.801Z</updated>
     
@@ -35,21 +35,21 @@
     </summary>
     
     
-      <category term="技术笔记" scheme="http://blog.dizent.cn/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+      <category term="技术笔记" scheme="http://zone.dizent.cn/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="网络" scheme="http://blog.dizent.cn/tags/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="http://zone.dizent.cn/tags/%E7%BD%91%E7%BB%9C/"/>
     
-      <category term="ngrok" scheme="http://blog.dizent.cn/tags/ngrok/"/>
+      <category term="ngrok" scheme="http://zone.dizent.cn/tags/ngrok/"/>
     
-      <category term="服务器" scheme="http://blog.dizent.cn/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="服务器" scheme="http://zone.dizent.cn/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>双十二淘宝隐藏活动分享</title>
-    <link href="http://blog.dizent.cn/2019/12/08/%E5%8F%8C%E5%8D%81%E4%BA%8C%E6%B7%98%E5%AE%9D%E9%9A%90%E8%97%8F%E6%B4%BB%E5%8A%A8%E5%88%86%E4%BA%AB/"/>
-    <id>http://blog.dizent.cn/2019/12/08/%E5%8F%8C%E5%8D%81%E4%BA%8C%E6%B7%98%E5%AE%9D%E9%9A%90%E8%97%8F%E6%B4%BB%E5%8A%A8%E5%88%86%E4%BA%AB/</id>
+    <link href="http://zone.dizent.cn/2019/12/08/%E5%8F%8C%E5%8D%81%E4%BA%8C%E6%B7%98%E5%AE%9D%E9%9A%90%E8%97%8F%E6%B4%BB%E5%8A%A8%E5%88%86%E4%BA%AB/"/>
+    <id>http://zone.dizent.cn/2019/12/08/%E5%8F%8C%E5%8D%81%E4%BA%8C%E6%B7%98%E5%AE%9D%E9%9A%90%E8%97%8F%E6%B4%BB%E5%8A%A8%E5%88%86%E4%BA%AB/</id>
     <published>2019-12-08T14:28:00.000Z</published>
     <updated>2020-01-02T03:38:21.093Z</updated>
     
@@ -66,14 +66,14 @@
     
     
     
-      <category term="薅羊毛" scheme="http://blog.dizent.cn/tags/%E8%96%85%E7%BE%8A%E6%AF%9B/"/>
+      <category term="薅羊毛" scheme="http://zone.dizent.cn/tags/%E8%96%85%E7%BE%8A%E6%AF%9B/"/>
     
   </entry>
   
   <entry>
     <title>京东双十一自动养红包脚本</title>
-    <link href="http://blog.dizent.cn/2019/11/04/%E4%BA%AC%E4%B8%9C%E5%8F%8C%E5%8D%81%E4%B8%80%E8%87%AA%E5%8A%A8%E5%85%BB%E7%BA%A2%E5%8C%85%E8%84%9A%E6%9C%AC/"/>
-    <id>http://blog.dizent.cn/2019/11/04/%E4%BA%AC%E4%B8%9C%E5%8F%8C%E5%8D%81%E4%B8%80%E8%87%AA%E5%8A%A8%E5%85%BB%E7%BA%A2%E5%8C%85%E8%84%9A%E6%9C%AC/</id>
+    <link href="http://zone.dizent.cn/2019/11/04/%E4%BA%AC%E4%B8%9C%E5%8F%8C%E5%8D%81%E4%B8%80%E8%87%AA%E5%8A%A8%E5%85%BB%E7%BA%A2%E5%8C%85%E8%84%9A%E6%9C%AC/"/>
+    <id>http://zone.dizent.cn/2019/11/04/%E4%BA%AC%E4%B8%9C%E5%8F%8C%E5%8D%81%E4%B8%80%E8%87%AA%E5%8A%A8%E5%85%BB%E7%BA%A2%E5%8C%85%E8%84%9A%E6%9C%AC/</id>
     <published>2019-11-04T06:01:00.000Z</published>
     <updated>2020-01-02T03:38:20.906Z</updated>
     
@@ -90,14 +90,14 @@
     
     
     
-      <category term="薅羊毛" scheme="http://blog.dizent.cn/tags/%E8%96%85%E7%BE%8A%E6%AF%9B/"/>
+      <category term="薅羊毛" scheme="http://zone.dizent.cn/tags/%E8%96%85%E7%BE%8A%E6%AF%9B/"/>
     
   </entry>
   
   <entry>
     <title>Docker安装Hadoop、Hbase、Zookeeper、Phoenix伪集群</title>
-    <link href="http://blog.dizent.cn/2019/10/24/Docker%E5%AE%89%E8%A3%85Hadoop%E3%80%81Hbase%E3%80%81Zookeeper%E3%80%81Phoenix%E4%BC%AA%E9%9B%86%E7%BE%A4-1/"/>
-    <id>http://blog.dizent.cn/2019/10/24/Docker%E5%AE%89%E8%A3%85Hadoop%E3%80%81Hbase%E3%80%81Zookeeper%E3%80%81Phoenix%E4%BC%AA%E9%9B%86%E7%BE%A4-1/</id>
+    <link href="http://zone.dizent.cn/2019/10/24/Docker%E5%AE%89%E8%A3%85Hadoop%E3%80%81Hbase%E3%80%81Zookeeper%E3%80%81Phoenix%E4%BC%AA%E9%9B%86%E7%BE%A4-1/"/>
+    <id>http://zone.dizent.cn/2019/10/24/Docker%E5%AE%89%E8%A3%85Hadoop%E3%80%81Hbase%E3%80%81Zookeeper%E3%80%81Phoenix%E4%BC%AA%E9%9B%86%E7%BE%A4-1/</id>
     <published>2019-10-24T02:13:00.000Z</published>
     <updated>2020-01-02T03:38:21.538Z</updated>
     
@@ -113,17 +113,17 @@
     </summary>
     
     
-      <category term="大数据" scheme="http://blog.dizent.cn/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+      <category term="大数据" scheme="http://zone.dizent.cn/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
     
-      <category term="bigdata" scheme="http://blog.dizent.cn/tags/bigdata/"/>
+      <category term="bigdata" scheme="http://zone.dizent.cn/tags/bigdata/"/>
     
   </entry>
   
   <entry>
     <title>使用DATAX将MySQL导入Phoenix</title>
-    <link href="http://blog.dizent.cn/2019/10/16/Phoenix/"/>
-    <id>http://blog.dizent.cn/2019/10/16/Phoenix/</id>
+    <link href="http://zone.dizent.cn/2019/10/16/Phoenix/"/>
+    <id>http://zone.dizent.cn/2019/10/16/Phoenix/</id>
     <published>2019-10-16T01:07:00.000Z</published>
     <updated>2020-01-02T03:38:21.219Z</updated>
     
@@ -139,10 +139,10 @@
     </summary>
     
     
-      <category term="中间件" scheme="http://blog.dizent.cn/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+      <category term="中间件" scheme="http://zone.dizent.cn/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
     
     
-      <category term="bigdata" scheme="http://blog.dizent.cn/tags/bigdata/"/>
+      <category term="bigdata" scheme="http://zone.dizent.cn/tags/bigdata/"/>
     
   </entry>
   
