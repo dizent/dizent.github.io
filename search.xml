@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>hadoop、hbase、zk伪集群服务单独启动命令</title>
+      <link href="/2020/02/19/hadoop%E3%80%81hbase%E3%80%81zk%E4%BC%AA%E9%9B%86%E7%BE%A4%E6%9C%8D%E5%8A%A1%E5%8D%95%E7%8B%AC%E5%90%AF%E5%8A%A8%E5%91%BD%E4%BB%A4/"/>
+      <url>/2020/02/19/hadoop%E3%80%81hbase%E3%80%81zk%E4%BC%AA%E9%9B%86%E7%BE%A4%E6%9C%8D%E5%8A%A1%E5%8D%95%E7%8B%AC%E5%90%AF%E5%8A%A8%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body><table><thead><tr><th align="center">服务名</th><th>重启命令</th><th>对应服务</th></tr></thead><tbody><tr><td align="center">SecondaryNameNode</td><td>sh /opt/hadoop/sbin/start-dfs.sh</td><td>hadoop</td></tr><tr><td align="center">ResourceManager</td><td>sh /opt/hadoop/sbin/start-yarn.sh</td><td>hadoop</td></tr><tr><td align="center">NameNode</td><td>sh /opt/hadoop/sbin/start-dfs.sh</td><td>hadoop</td></tr><tr><td align="center">HRegionServer</td><td>sh /opt/hbase/bin/hbase-daemon.sh start regionserver</td><td>hbase</td></tr><tr><td align="center">HMaster</td><td>sh /opt/hbase/bin/hbase-daemon.sh start master</td><td>hbase</td></tr><tr><td align="center">QuorumPeerMain</td><td></td><td>zookeeper</td></tr></tbody></table></body></html>]]></content>
+      
+      
+      <categories>
+          
+          <category> 大数据 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> bigdata </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>简单实现内网穿透</title>
       <link href="/2019/12/16/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
       <url>/2019/12/16/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</url>
@@ -125,17 +150,6 @@
     
     <entry>
       <title></title>
-      <link href="/manifest.json"/>
-      <url>/manifest.json</url>
-      
-        <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body>{"name":"Dizent","short_name":"dizent","theme_color":"#2196f3","background_color":"#2196f3","display":"standalone","Scope":"/","start_url":"/","icons":[{"src":"images/icons/icon-72x72.png","sizes":"72x72","type":"image/png"},{"src":"images/icons/icon-96x96.png","sizes":"96x96","type":"image/png"},{"src":"images/icons/icon-128x128.png","sizes":"128x128","type":"image/png"},{"src":"images/icons/icon-144x144.png","sizes":"144x144","type":"image/png"},{"src":"images/icons/icon-152x152.png","sizes":"152x152","type":"image/png"},{"src":"images/icons/icon-192x192.png","sizes":"192x192","type":"image/png"},{"src":"images/icons/icon-384x384.png","sizes":"384x384","type":"image/png"},{"src":"images/icons/icon-512x512.png","sizes":"512x512","type":"image/png"}],"splash_pages":null}</body></html>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/404.html"/>
       <url>/404.html</url>
       
@@ -147,10 +161,10 @@
     
     <entry>
       <title></title>
-      <link href="/404/index.html"/>
-      <url>/404/index.html</url>
+      <link href="/manifest.json"/>
+      <url>/manifest.json</url>
       
-        <content type="html"><![CDATA[<html lang="en"><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>            <meta charset="UTF-8">        <title>404</title>    <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Dizent" type="application/atom+xml"></head>    <body>        <script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8"></script>    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/tororo.model.json"},"display":{"superSample":2,"width":120,"height":200,"position":"left","hOffset":20,"vOffset":50},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body></html>]]></content>
+        <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body>{"name":"Dizent","short_name":"dizent","theme_color":"#2196f3","background_color":"#2196f3","display":"standalone","Scope":"/","start_url":"/","icons":[{"src":"images/icons/icon-72x72.png","sizes":"72x72","type":"image/png"},{"src":"images/icons/icon-96x96.png","sizes":"96x96","type":"image/png"},{"src":"images/icons/icon-128x128.png","sizes":"128x128","type":"image/png"},{"src":"images/icons/icon-144x144.png","sizes":"144x144","type":"image/png"},{"src":"images/icons/icon-152x152.png","sizes":"152x152","type":"image/png"},{"src":"images/icons/icon-192x192.png","sizes":"192x192","type":"image/png"},{"src":"images/icons/icon-384x384.png","sizes":"384x384","type":"image/png"},{"src":"images/icons/icon-512x512.png","sizes":"512x512","type":"image/png"}],"splash_pages":null}</body></html>]]></content>
       
     </entry>
     
@@ -168,11 +182,11 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title></title>
+      <link href="/404/index.html"/>
+      <url>/404/index.html</url>
       
-        <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body></body></html>]]></content>
+        <content type="html"><![CDATA[<html lang="en"><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>            <meta charset="UTF-8">        <title>404</title>    <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Dizent" type="application/atom+xml"></head>    <body>        <script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8"></script>    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/tororo.model.json"},"display":{"superSample":2,"width":120,"height":200,"position":"left","hOffset":20,"vOffset":50},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body></html>]]></content>
       
     </entry>
     
@@ -190,9 +204,9 @@
     
     
     <entry>
-      <title>友情链接</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body></body></html>]]></content>
       
@@ -212,11 +226,22 @@
     
     
     <entry>
+      <title>友情链接</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body></body></html>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>记录世界的美好</title>
       <link href="/photos/index.html"/>
       <url>/photos/index.html</url>
       
-        <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body><blockquote><h3 id="记录这个世界"><a href="#记录这个世界" class="headerlink" title="记录这个世界"></a>记录这个世界</h3></blockquote><div class="justified-gallery"><p></p><div><img src="http://lorempixel.com/1600/900/" alt></div><br><div><img src="http://lorempixel.com/1920/1080/" alt></div><br><div><img src="http://lorempixel.com/1920/1080/" alt></div><br><div><img src="http://lorempixel.com/1920/1080/" alt></div><br><div><img src="http://lorempixel.com/1920/1080/" alt></div><br><div><img src="http://lorempixel.com/1920/1080/" alt></div><br><div><img src="http://lorempixel.com/1920/1080/" alt></div><p></p>          </div><blockquote><h3 id="夜的第二章"><a href="#夜的第二章" class="headerlink" title="夜的第二章"></a>夜的第二章</h3></blockquote><div class="justified-gallery"><p></p><div><img src="http://lorempixel.com/1920/1080/" alt></div><br><div><img src="http://lorempixel.com/1920/1080/" alt></div><br><div><img src="http://lorempixel.com/1920/1080/" alt></div><br><div><img src="http://lorempixel.com/1920/1080/" alt></div><br><div><img src="http://lorempixel.com/1920/1080/" alt></div><br><div><img src="http://lorempixel.com/1920/1080/" alt></div><br><div><img src="http://lorempixel.com/1920/1080/" alt></div><p></p>          </div></body></html>]]></content>
+        <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body></body></html>]]></content>
       
     </entry>
     
@@ -227,7 +252,7 @@
       <link href="/music/index.html"/>
       <url>/music/index.html</url>
       
-        <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body><blockquote><h3 id="纯音乐"><a href="#纯音乐" class="headerlink" title="纯音乐"></a>纯音乐</h3></blockquote>    <div id="aplayer-IuYYkLCL" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="115264805" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div><blockquote><h3 id="小语种"><a href="#小语种" class="headerlink" title="小语种"></a>小语种</h3></blockquote>    <div id="aplayer-ftkhraBU" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="135000374" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div></body></html>]]></content>
+        <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body><blockquote><h3 id="纯音乐"><a href="#纯音乐" class="headerlink" title="纯音乐"></a>纯音乐</h3></blockquote>    <div id="aplayer-hnyoqkBk" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="115264805" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div><blockquote><h3 id="小语种"><a href="#小语种" class="headerlink" title="小语种"></a>小语种</h3></blockquote>    <div id="aplayer-CrzqPYBY" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="135000374" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div></body></html>]]></content>
       
     </entry>
     
