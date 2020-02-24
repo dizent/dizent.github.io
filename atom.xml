@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zone.dizent.cn/"/>
-  <updated>2020-02-21T05:23:37.272Z</updated>
+  <updated>2020-02-24T09:48:38.840Z</updated>
   <id>http://zone.dizent.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>薅羊毛：爱奇艺会员一元一个月</title>
+    <link href="http://zone.dizent.cn/2020/02/24/%E8%96%85%E7%BE%8A%E6%AF%9B%EF%BC%9A%E7%88%B1%E5%A5%87%E8%89%BA%E4%BC%9A%E5%91%98%E4%B8%80%E5%85%83%E4%B8%80%E4%B8%AA%E6%9C%88/"/>
+    <id>http://zone.dizent.cn/2020/02/24/%E8%96%85%E7%BE%8A%E6%AF%9B%EF%BC%9A%E7%88%B1%E5%A5%87%E8%89%BA%E4%BC%9A%E5%91%98%E4%B8%80%E5%85%83%E4%B8%80%E4%B8%AA%E6%9C%88/</id>
+    <published>2020-02-24T09:47:19.643Z</published>
+    <updated>2020-02-24T09:48:38.840Z</updated>
+    
+    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body></body></html>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>使用coding持续集成部署springboot项目到服务器</title>
