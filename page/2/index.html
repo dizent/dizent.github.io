@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+     Dizent
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+<link rel="alternate" href="/atom.xml" title="Dizent" type="application/atom+xml">
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content">
+      
+<section class="cover">
+    
+      
+      <a class="forkMe" href="https://github.com/Shen-Yu/hexo-theme-ayer"
+        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover1.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">Dizent</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
+<div id="main">
+  <section class="outer">
+  <article class="articles">
+    
+    
+    
+    
+    <article id="post-Phoenix" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/10/16/Phoenix/"
+    >使用DATAX将MySQL导入Phoenix</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2019/10/16/Phoenix/" class="article-date">
+  <time datetime="2019-10-16T01:07:00.000Z" itemprop="datePublished">2019-10-16</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/">中间件</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h2 id="使用DATAX将MySQL导入Phoenix"><a href="#使用DATAX将MySQL导入Phoenix" class="headerlink" title="使用DATAX将MySQL导入Phoenix"></a>使用DATAX将MySQL导入Phoenix</h2><h3 id="安装Hadoop、Zookeeper、Hbase-2-X、Phoenix-5-X"><a href="#安装Hadoop、Zookeeper、Hbase-2-X、Phoenix-5-X" class="headerlink" title="安装Hadoop、Zookeeper、Hbase 2.X、Phoenix 5.X"></a>安装Hadoop、Zookeeper、Hbase 2.X、Phoenix 5.X</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker pull mysaber/hadoop 0.1.5</span></span><br></pre></td></tr></table></figure>
+<h3 id="配置Phoenix-5-X"><a href="#配置Phoenix-5-X" class="headerlink" title="配置Phoenix 5.X"></a>配置Phoenix 5.X</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">//复制hbase配置到phoenix</span><br><span class="line"><span class="meta">$</span><span class="bash"> cp &#123;HBase_Home&#125;/conf/hbase-site.xml &#123;phoenix_home&#125;/bin/</span></span><br><span class="line">//拷贝phoenix下的把 phoenix-&lt;version&gt;-server.jar、phoenix-core-&lt;version&gt;.jar 拷贝到hbaseServer的lib目录下&#123;Hbase_Home&#125;/lib</span><br></pre></td></tr></table></figure>
+<h3 id="下载DataX源码并进行编译"><a href="#下载DataX源码并进行编译" class="headerlink" title="下载DataX源码并进行编译"></a>下载DataX源码并进行编译</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/alibaba/DataX.git</span></span><br></pre></td></tr></table></figure>
+<h3 id="在Phoenix中创建与MySQL相对应的table"><a href="#在Phoenix中创建与MySQL相对应的table" class="headerlink" title="在Phoenix中创建与MySQL相对应的table"></a>在Phoenix中创建与MySQL相对应的table</h3><p>Phoenix的数据类型,注意修改MySQL表中数据到对应数据类型，另外not null需要与primary key联合使用</p>
+<ul>
+<li>INTEGER</li>
+<li>UNSIGNED_INT</li>
+<li>BIGINT</li>
+<li>UNSIGNED_LONG</li>
+<li>TINYINT</li>
+<li>UNSIGNED_TINYINT</li>
+<li>SMALLINT</li>
+<li>UNSIGNED_SMALLINT</li>
+<li>FLOAT</li>
+<li>UNSIGNED_FLOAT</li>
+<li>DOUBLE</li>
+<li>UNSIGNED_DOUBLE</li>
+<li>DECIMAL</li>
+<li>BOOLEAN</li>
+<li>TIME</li>
+<li>DATE</li>
+<li>TIMESTAMP</li>
+<li>UNSIGNED_TIME</li>
+<li>UNSIGNED_DATE</li>
+<li>UNSIGNED_TIMESTAMP</li>
+<li>VARCHAR</li>
+<li>CHAR</li>
+<li>BINARY</li>
+<li>VARBINARY</li>
+<li>ARRAY</li>
+</ul>
+<p>例如驾驶舱中的visit_details可修改为：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">create table visit_details (</span><br><span class="line">        inc_id varchar(32) not null,</span><br><span class="line">        area_code varchar(32)  ,</span><br><span class="line">        area_name varchar(32)  ,</span><br><span class="line">        department_code varchar(32)  ,</span><br><span class="line">        department_name varchar(32)  ,</span><br><span class="line">        visit_type tinyint default 0  ,</span><br><span class="line">        patient_code varchar(32) not null  ,</span><br><span class="line">        address varchar(128)   ,</span><br><span class="line">        address_split varchar(128) ,</span><br><span class="line">        address_province varchar(32) ,</span><br><span class="line">        address_city varchar(32)   ,</span><br><span class="line">        address_district varchar(32)  ,</span><br><span class="line">        address_town varchar(32)  ,</span><br><span class="line">        address_street varchar(128) ,</span><br><span class="line">        gender tinyint default 0 ,</span><br><span class="line">        age integer ,</span><br><span class="line">        visit_at timestamp ,</span><br><span class="line">        operate_at timestamp ,</span><br><span class="line">        created_at timestamp not null ,</span><br><span class="line">        updated_at timestamp not null </span><br><span class="line">  CONSTRAINT PK PRIMARY KEY (inc_id, patient_code, created_at, updated_at) </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>插入语句示例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">UPSERT INTO visit_details(inc_id, area_code, area_name, department_code, department_name, visit_type, patient_code, address, address_split, address_province, address_city, address_district, address_town, address_street, gender, age, visit_at, operate_at, created_at, updated_at) VALUES (&#39;0000011ccc654b518edbce2b3e58afa2&#39;, &#39;9&#39;, &#39;江南分院&#39;, &#39;0204&#39;, &#39;江南急诊科&#39;, 1, &#39;1000003834429&#39;, &#39;重庆市万州区石峰路999号&#39;, &#39;重庆市-万州区-石峰路999号&#39;, &#39;重庆市&#39;, NULL, &#39;万州区&#39;, NULL, &#39;石峰路999号&#39;, 1, 3, &#39;2019-02-10 22:43:11&#39;, &#39;2019-02-10 20:29:19&#39;, &#39;2019-08-01 00:39:43&#39;, &#39;2019-08-01 00:39:43&#39;);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Datax源码编译（源码plugins太多，可以将主目录下pom.xml文件中的不需要的module注释掉）</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span>  &#123;DataX_source_code_home&#125;</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mvn -U clean package assembly:assembly -Dmaven.test.skip=<span class="literal">true</span></span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>在编译的目录下，进入target目录，可以找到编译后的datax。</p>
+<blockquote>
+<p>Phoenix开启QueryServer;服务器需要开启8765端口，docker则需要开放并映射8765端口</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> &#123;Phoenix_Home&#125;/bin</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./queryServer.py start</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>编辑DataX的Job文件：</p>
+<ol>
+<li><p>新建一个json文件：mysql2phoenix.json</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  job:&#123;</span><br><span class="line">	"content":[</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">"reader"</span>:$Reader_Object,</span><br><span class="line">			<span class="attr">"writer"</span>:$Writer_Object</span><br><span class="line">		&#125;</span><br><span class="line">	],</span><br><span class="line">	"setting":&#123;</span><br><span class="line">		"speed":&#123;</span><br><span class="line">			"byte":1048576,</span><br><span class="line">      <span class="comment">//同时开启的进程数</span></span><br><span class="line">			"channel":16,</span><br><span class="line">      <span class="comment">//分片的记录条数</span></span><br><span class="line">			"record":10000</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Reader Object</p>
+</li>
+</ol>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">     <span class="comment">//name为datax的plugin目录下的插件名</span></span><br><span class="line">     <span class="attr">"name"</span>:<span class="string">"mysqlreader"</span>, </span><br><span class="line">     <span class="comment">//paramter为插件所需要的参数，各插件各不相同</span></span><br><span class="line">	<span class="attr">"parameter"</span>:&#123;</span><br><span class="line">		<span class="attr">"connection"</span>:[</span><br><span class="line">			&#123;</span><br><span class="line">           				<span class="comment">//mysql连接地址，可配多个</span></span><br><span class="line">				<span class="attr">"jdbcUrl"</span>:[</span><br><span class="line">					<span class="string">"jdbc:mysql://localhost:3306/odc_v2"</span></span><br><span class="line">				],</span><br><span class="line">           				<span class="comment">//mysql查询SQL语句，列名顺序和列数需要和writer中的相同</span></span><br><span class="line">				<span class="attr">"querySql"</span>:[</span><br><span class="line">					<span class="string">"select * from visit_details;"</span></span><br><span class="line">				]</span><br><span class="line">			&#125;</span><br><span class="line">		],</span><br><span class="line">		<span class="attr">"password"</span>:<span class="string">"******"</span>,</span><br><span class="line">		<span class="attr">"username"</span>:<span class="string">"root"</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>Writer_Object</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  				<span class="comment">//write的插件名</span></span><br><span class="line">				<span class="attr">"name"</span>:<span class="string">"hbase20xsqlwriter"</span>,</span><br><span class="line">				<span class="attr">"parameter"</span>:&#123;</span><br><span class="line">          			<span class="comment">//单次提交的条数</span></span><br><span class="line">					<span class="attr">"batchSize"</span>:<span class="string">"100"</span>,</span><br><span class="line">					<span class="attr">"column"</span>:[</span><br><span class="line">						<span class="string">"INC_ID"</span>,</span><br><span class="line">						<span class="string">"AREA_CODE"</span>,</span><br><span class="line">						<span class="string">"AREA_NAME"</span>,</span><br><span class="line">						<span class="string">"DEPARTMENT_CODE"</span>,</span><br><span class="line">						<span class="string">"DEPARTMENT_NAME"</span>,</span><br><span class="line">						<span class="string">"VISIT_TYPE"</span>,</span><br><span class="line">						<span class="string">"PATIENT_CODE"</span>,</span><br><span class="line">						<span class="string">"ADDRESS"</span>,</span><br><span class="line">						<span class="string">"ADDRESS_SPLIT"</span>,</span><br><span class="line">						<span class="string">"ADDRESS_PROVINCE"</span>,</span><br><span class="line">						<span class="string">"ADDRESS_CITY"</span>,</span><br><span class="line">						<span class="string">"ADDRESS_DISTRICT"</span>,</span><br><span class="line">						<span class="string">"ADDRESS_TOWN"</span>,</span><br><span class="line">						<span class="string">"ADDRESS_STREET"</span>,</span><br><span class="line">						<span class="string">"GENDER"</span>,</span><br><span class="line">						<span class="string">"AGE"</span>,</span><br><span class="line">						<span class="string">"VISIT_AT"</span>,</span><br><span class="line">						<span class="string">"OPERATE_AT"</span>,</span><br><span class="line">						<span class="string">"CREATED_AT"</span>,</span><br><span class="line">						<span class="string">"UPDATED_AT"</span></span><br><span class="line">					],</span><br><span class="line">          			<span class="comment">//空值处理策略，有skip和set null</span></span><br><span class="line">					<span class="attr">"nullMode"</span>:<span class="string">"skip"</span>,</span><br><span class="line">          			<span class="comment">//服务地址</span></span><br><span class="line">					<span class="attr">"queryServerAddress"</span>:<span class="string">"http://server-Ip:8765"</span>,</span><br><span class="line">					<span class="comment">//写入表</span></span><br><span class="line">          			<span class="attr">"table"</span>:<span class="string">"VISIT_DETAILS"</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="运行DataX"><a href="#运行DataX" class="headerlink" title="运行DataX"></a>运行DataX</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ cd &#123;DataX_Home&#125;/bin</span><br><span class="line">$ python datax.py &#123;Your_Job_Path&#125;/mysql2phoenix.json</span><br></pre></td></tr></table></figure>
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bigdata/" rel="tag">bigdata</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2015-2020
+        Dizent
+      </li>
+      <li>
+        
+        Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <span>
+  <i>PV:<span id="busuanzi_value_page_pv"></span></i>
+  <i>UV:<span id="busuanzi_value_site_uv"></span></i>
+</span>
+        
+      </li>
+      
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+      </div>
+    </main>
+    <aside class="sidebar">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Dizent"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="http://shenyu-vip.lofter.com" target="_blank" rel="noopener">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/share.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['面朝大海，春暖花开', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
+      startDelay: 0,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  } catch (err) {
+  }
+
+</script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/js/ayer.js"></script>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+
+
+    
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/tororo.model.json"},"display":{"superSample":2,"width":120,"height":200,"position":"left","hOffset":20,"vOffset":50},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+
+</html>
