@@ -271,22 +271,22 @@
     
     
     <entry>
-      <title>关于我</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>books</title>
+      <link href="/books/index.html"/>
+      <url>/books/index.html</url>
       
-        <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body><p><strong>95后Java程序猿</strong></p><p><strong>在技术提升的道路上磕磕绊绊，希望能找到一起前行的伙伴</strong></p></body></html>]]></content>
+        <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body></body></html>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>books</title>
-      <link href="/books/index.html"/>
-      <url>/books/index.html</url>
+      <title>关于我</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body></body></html>]]></content>
+        <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body><p><strong>95后Java程序猿</strong></p><p><strong>在技术提升的道路上磕磕绊绊，希望能找到一起前行的伙伴</strong></p></body></html>]]></content>
       
     </entry>
     
@@ -326,11 +326,22 @@
     
     
     <entry>
+      <title>分类</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body></body></html>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>🎵Dizent音乐台</title>
       <link href="/music/index.html"/>
       <url>/music/index.html</url>
       
-        <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body><blockquote><h3 id="纯音乐"><a href="#纯音乐" class="headerlink" title="纯音乐"></a>纯音乐</h3>    <div id="aplayer-nNjXnAtt" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="115264805" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div><h3 id="小语种"><a href="#小语种" class="headerlink" title="小语种"></a>小语种</h3>    <div id="aplayer-lsnbHOiY" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="135000374" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div></blockquote></body></html>]]></content>
+        <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body><blockquote><h3 id="纯音乐"><a href="#纯音乐" class="headerlink" title="纯音乐"></a>纯音乐</h3>    <div id="aplayer-EDBWxEXu" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="115264805" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div><h3 id="小语种"><a href="#小语种" class="headerlink" title="小语种"></a>小语种</h3>    <div id="aplayer-JazLpLIb" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="135000374" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div></blockquote></body></html>]]></content>
       
     </entry>
     
@@ -340,17 +351,6 @@
       <title>记录世界的美好</title>
       <link href="/photos/index.html"/>
       <url>/photos/index.html</url>
-      
-        <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body></body></html>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>分类</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script></head><body></body></html>]]></content>
       
