@@ -117,7 +117,7 @@
           switch ($tallSelect.val()) {
             case "2":
                 // 赤足
-                vm.tall = $tall_input.val() * 7;
+                vm.tall = ($tall_input.val() * 7).toFixed(2);
                 console.info(vm.tall);
                 break;
             default:
@@ -127,19 +127,19 @@
                     case "2":
                         // 正常
                         console.info("正常");
-                        vm.tall = $tall_input.val() * 8;
+                        vm.tall = ($tall_input.val() * 8).toFixed(2);
                         console.info(vm.tall);
                         break;
                     case "3":
                         // 偏胖
                         console.info("偏胖");
-                        vm.tall = $tall_input.val() * 8.2;
+                        vm.tall = ($tall_input.val() * 8.2).toFixed(2);
                         console.info(vm.tall);
                         break;
                     default:
                         // 偏瘦
                         console.info("偏瘦");
-                        vm.tall = $tall_input.val() * 7.8;
+                        vm.tall = ($tall_input.val() * 7.8).toFixed(2);
                         console.info(vm.tall);
                         break;
                 }
@@ -149,19 +149,19 @@
                     case "2":
                         // 前掌长
                         console.info("前掌长");
-                        vm.age = $age_input.val() * 3;
+                        vm.age = ($age_input.val() * 3).toFixed(2);
                         console.info(vm.age);
                         break;
                     case "3":
                         // 鞋跟磨损长
                         console.info("偏胖");
-                        vm.age = $age_input.val() * 10;
+                        vm.age = ($age_input.val() * 10).toFixed(2);
                         console.info(vm.age);
                         break;
                     default:
                         // 跟中区长
                         console.info("跟中区长");
-                        vm.age = $age_input.val() * 5;
+                        vm.age = ($age_input.val() * 5).toFixed(2);
                         console.info(vm.age);
                         break;
             }
