@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>足迹信息计算</title>
+<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+<link rel="stylesheet" href="static/css/weui.css" />
+<script src="static/js/weui.min.js"></script>
+<script src="static/js/jquery.min.js"></script>
+</head>
+<body>
+<div id="app" class="page">
+    <div class="weui-form">
+      <div class="weui-form__text-area">
+        <h2 class="weui-form__title">计算</h2>
+        <div class="weui-form__desc">按照提示输入相应数据操作</div>
+      </div>
+      <div class="weui-form__control-area">
+        <div class="weui-cells__group weui-cells__group_form">
+          <div class="weui-cells__title">输入数据</div>
+          <div class="weui-cells weui-cells_form">
+            <div class="weui-cell weui-cell_active weui-cell_select">
+                <div class="weui-cell__bd">
+                    <select class="weui-select" name="select1" id="tallSelect" @change="tallConditionChange">
+                        <option selected="" value=1>脚掌长</option>
+                        <option value=2>赤足长</option>
+                    </select>
+                </div>
+            </div>
+            <div class="weui-cell weui-cell_active weui-cell_select weui-cell_select-before">
+                <div class="weui-cell__hd">
+                    <select class="weui-select" name="select2" id="bodySelect">
+                        <option value="1">偏瘦</option>
+                        <option selected="" value="2">正常</option>
+                        <option value="3">偏胖</option>
+                    </select>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="number" pattern="[0-9]*.[0-9]{2}" placeholder="请输入数据" @input="dataValid" id="tall_input"/>
+                </div>
+            </div>
+            <div class="weui-cell weui-cell_active weui-cell_select">
+                <div class="weui-cell__bd">
+                    <select class="weui-select" name="select3" id = "ageSelect" @change="conditionChange">
+                        <option selected="" value="1">跟中区长</option>
+                        <option value="2">前掌长</option>
+                        <option value="3">鞋跟磨损长</option>
+                    </select>
+                </div>
+            </div>
+            <div class="weui-cell weui-cell_active">
+                <div class="weui-cell__hd"><label class="weui-label">{{ ageCondition }}</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="number" pattern="[0-9]*.[0-9]{2}" placeholder="请输入" @input="dataValid" id="age_input"/>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+      <div class="weui-form__opr-area">
+        <a class="weui-btn weui-btn_primary weui-btn_disabled" href="javascript:" id="showTooltips">确定</a>
+      </div>
+     
+      <div class="js_dialog" id="iosDialog2" style="display: none;">
+        <div class="weui-mask"></div>
+        <div class="weui-dialog">
+            <div class="weui-dialog__bd">
+                输入数据计算得：
+                <p>身高为：<span style="color: orange;">{{ tall }}</span>CM;</p>
+                <p>年龄为：<span style="color: orange;">{{ age }}</span>岁</p></div>
+            <div class="weui-dialog__ft">
+                <a href="javascript:" class="weui-dialog__btn weui-dialog__btn_primary">知道了</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            ageCondition: "跟中区长",
+            tall: 0,
+            age: 0
+        },
+        methods:{
+            conditionChange: function(){
+                var $ageSelect = $('#ageSelect option:selected');
+                console.info("agecondition  "+$ageSelect.text());
+                this.ageCondition = $ageSelect.text();
+            },
+            tallConditionChange:function(){
+                var $tallSelect = $('#tallSelect option:selected');
+                var $bodySelect = $('#bodySelect');
+                if($tallSelect.val() == 2){
+                    $bodySelect.val("2");
+                    $bodySelect.attr("disabled",true);
+                }else{
+                    $bodySelect.attr("disabled",false);
+                }
+            }
+        }
+    });
+      $(function(){
+        var $tallSelect = $('#tallSelect');
+        var $bodySelect = $('#bodySelect');
+        var $ageSelect = $('#ageSelect');
+        var $tall_input = $('#tall_input');
+        var $age_input = $('#age_input');
+            $iosDialog2 = $('#iosDialog2');
+
+        $iosDialog2.on('click', '.weui-dialog__btn', function(){
+            $iosDialog2.fadeOut(200);
+        });
+
+        $('#showTooltips').on('click', function(){
+          if ($(this).hasClass('weui-btn_disabled')) return;
+          switch ($tallSelect.val()) {
+            case "2":
+                // 赤足
+                vm.tall = $tall_input.val() * 7;
+                console.info(vm.tall);
+                break;
+            default:
+                // 脚掌
+                console.info("脚掌");
+                switch ($bodySelect.val()){
+                    case "2":
+                        // 正常
+                        console.info("正常");
+                        vm.tall = $tall_input.val() * 8;
+                        console.info(vm.tall);
+                        break;
+                    case "3":
+                        // 偏胖
+                        console.info("偏胖");
+                        vm.tall = $tall_input.val() * 8.2;
+                        console.info(vm.tall);
+                        break;
+                    default:
+                        // 偏瘦
+                        console.info("偏瘦");
+                        vm.tall = $tall_input.val() * 7.8;
+                        console.info(vm.tall);
+                        break;
+                }
+                break;
+          }
+          switch ($ageSelect.val()){
+                    case "2":
+                        // 前掌长
+                        console.info("前掌长");
+                        vm.age = $age_input.val() * 3;
+                        console.info(vm.age);
+                        break;
+                    case "3":
+                        // 鞋跟磨损长
+                        console.info("偏胖");
+                        vm.age = $age_input.val() * 10;
+                        console.info(vm.age);
+                        break;
+                    default:
+                        // 跟中区长
+                        console.info("跟中区长");
+                        vm.age = $age_input.val() * 5;
+                        console.info(vm.age);
+                        break;
+            }
+            $iosDialog2.fadeIn(200);
+      });
+    });
+      function dataValid(){
+            var $tall_input = $('#tall_input');
+            var $age_input = $('#age_input');
+            if ($age_input.val() && $age_input.val()){
+                $('#showTooltips').removeClass('weui-btn_disabled');
+            }else{
+                $('#showTooltips').addClass('weui-btn_disabled');
+            }
+        }
+  </script>
+</body>
+</html>
