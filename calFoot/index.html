@@ -36,10 +36,10 @@
             </div>
             <div class="weui-cell weui-cell_active weui-cell_select weui-cell_select-before">
                 <div class="weui-cell__hd">
-                    <select class="weui-select" name="select2" id="bodySelect">
-                        <option value="1">偏瘦</option>
-                        <option selected="" value="2">正常</option>
-                        <option value="3">偏胖</option>
+                    <select class="weui-select" name="select2" id="bodySelect" @change="tallFactorChange">
+                        <option value="1">偏瘦 × {{ tallFactor }}</option>
+                        <option selected="" value="2">正常 × {{ tallFactor }}</option>
+                        <option value="3">偏胖 × {{ tallFactor }}</option>
                     </select>
                 </div>
                 <div class="weui-cell__bd">
@@ -49,7 +49,7 @@
             <div class="weui-cell weui-cell_active weui-cell_select">
                 <div class="weui-cell__bd">
                     <select class="weui-select" name="select3" id = "ageSelect" @change="conditionChange">
-                        <option selected="" value="1">跟中区长</option>
+                        <option selected="" value="1" >跟中区长</option>
                         <option value="2">前掌长</option>
                         <option value="3">鞋跟磨损长</option>
                     </select>
@@ -94,6 +94,7 @@
         el: '#app',
         data: {
             ageCondition: "跟中区长",
+            tallFactor: 8,
             tall: 0,
             age: 0
         },
@@ -108,10 +109,18 @@
                 var $bodySelect = $('#bodySelect');
                 if($tallSelect.val() == 2){
                     $bodySelect.val("2");
+                    vm.tallFactor = 7;
                     $bodySelect.attr("disabled",true);
                 }else{
+                    if($bodySelect.val()){
+                        vm.tallFactor = 8;
+                    }
                     $bodySelect.attr("disabled",false);
                 }
+            },
+            tallFactorChange:function(){
+                var $bodySelect = $('#bodySelect');
+                
             }
         }
     });
