@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">archive_a: 2018 | Dizent</title>
+  <title itemprop="name">日语五十音 | Dizent</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -350,320 +350,407 @@
   </div>
 </header>
 
-      <style type="text/css">
-  #contentss {
-  position: relative;
-  width: 800px;
-  height: 1200px;
-  max-height: 1200px;
-  margin-bottom: 15px;
-  margin-top: 15px;
-  text-align: center;
-  border: 0;
-  border-radius: 10px;
-  color: rgba(0, 0, 0, .87);
-  background: #fff 50%;
-  background-size: cover;
-  box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
-  margin:0 auto;
-  }
-</style>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
 
-<div class="blank" style="padding-top: 75px;">
-</div>
-<div id="content" class="site-content">
-  <div id="main">
-    <header class="page-header">
-      <h1 class="cat-title">
-      归档</h1>
-      <span class="cat-des">
-        <p>
-        Archives</p>
-      </span>
-    </header>
-
-  <div id="contents">
-    <div class="container archive-calendar">
-    <div class="card">
-        <div id="post-calendar" class="card-content"></div>
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://imgkr.cn-bj.ufileos.com/20becc62-b4d3-4922-b56a-d208ba956c23.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.8/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://imgkr.cn-bj.ufileos.com/20becc62-b4d3-4922-b56a-d208ba956c23.png">
     </div>
-</div>
-
-<script type="text/javascript" src="/js/echarts.min.js"></script>
-<script type="text/javascript">
-    let myChart = echarts.init(document.getElementById('post-calendar'));
-
-    
-
-    let option = {
-        title: {
-            top: 0,
-            text: 'Post Calendar',
-            left: 'center',
-            textStyle: {
-                color: '#3C4858'
-            }
-        },
-        tooltip: {
-            padding: 10,
-            backgroundColor: '#555',
-            borderColor: '#777',
-            borderWidth: 1,
-            formatter: function (obj) {
-                var value = obj.value;
-                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
-            }
-        },
-        visualMap: {
-            show: true,
-            showLabel: true,
-            categories: [0, 1, 2, 3, 4],
-            calculable: true,
-            inRange: {
-                symbol: 'rect',
-                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
-            },
-            itemWidth: 12,
-            itemHeight: 12,
-            orient: 'horizontal',
-            left: 'center',
-            bottom: 0
-        },
-        calendar: [{
-            left: 'center',
-            range: ["2019-05-09", "2020-05-09"],
-            cellSize: [13, 13],
-            splitLine: {
-                show: false
-            },
-            itemStyle: {
-                color: '#196127',
-                borderColor: '#fff',
-                borderWidth: 2
-            },
-            yearLabel: {
-                show: false
-            },
-            monthLabel: {
-                nameMap: 'en',
-                fontSize: 11
-            },
-            dayLabel: {
-                formatter: '{start}  1st',
-                nameMap: 'en',
-                fontSize: 11
-            }
-        }],
-        series: [{
-            type: 'heatmap',
-            coordinateSystem: 'calendar',
-            calendarIndex: 0,
-            data: [["2019-05-09", 0], ["2019-05-10", 0], ["2019-05-11", 0], ["2019-05-12", 0], ["2019-05-13", 0], ["2019-05-14", 0], ["2019-05-15", 0], ["2019-05-16", 0], ["2019-05-17", 0], ["2019-05-18", 0], ["2019-05-19", 0], ["2019-05-20", 0], ["2019-05-21", 0], ["2019-05-22", 0], ["2019-05-23", 0], ["2019-05-24", 0], ["2019-05-25", 0], ["2019-05-26", 0], ["2019-05-27", 0], ["2019-05-28", 0], ["2019-05-29", 0], ["2019-05-30", 0], ["2019-05-31", 0], ["2019-06-01", 0], ["2019-06-02", 0], ["2019-06-03", 0], ["2019-06-04", 0], ["2019-06-05", 0], ["2019-06-06", 0], ["2019-06-07", 0], ["2019-06-08", 0], ["2019-06-09", 0], ["2019-06-10", 0], ["2019-06-11", 0], ["2019-06-12", 0], ["2019-06-13", 0], ["2019-06-14", 0], ["2019-06-15", 0], ["2019-06-16", 0], ["2019-06-17", 0], ["2019-06-18", 0], ["2019-06-19", 0], ["2019-06-20", 0], ["2019-06-21", 0], ["2019-06-22", 0], ["2019-06-23", 0], ["2019-06-24", 0], ["2019-06-25", 0], ["2019-06-26", 0], ["2019-06-27", 0], ["2019-06-28", 0], ["2019-06-29", 0], ["2019-06-30", 0], ["2019-07-01", 0], ["2019-07-02", 0], ["2019-07-03", 0], ["2019-07-04", 0], ["2019-07-05", 0], ["2019-07-06", 0], ["2019-07-07", 0], ["2019-07-08", 0], ["2019-07-09", 0], ["2019-07-10", 0], ["2019-07-11", 0], ["2019-07-12", 0], ["2019-07-13", 0], ["2019-07-14", 0], ["2019-07-15", 0], ["2019-07-16", 0], ["2019-07-17", 0], ["2019-07-18", 0], ["2019-07-19", 0], ["2019-07-20", 0], ["2019-07-21", 0], ["2019-07-22", 0], ["2019-07-23", 0], ["2019-07-24", 0], ["2019-07-25", 0], ["2019-07-26", 0], ["2019-07-27", 0], ["2019-07-28", 0], ["2019-07-29", 0], ["2019-07-30", 0], ["2019-07-31", 0], ["2019-08-01", 0], ["2019-08-02", 0], ["2019-08-03", 0], ["2019-08-04", 0], ["2019-08-05", 0], ["2019-08-06", 0], ["2019-08-07", 0], ["2019-08-08", 0], ["2019-08-09", 0], ["2019-08-10", 0], ["2019-08-11", 0], ["2019-08-12", 0], ["2019-08-13", 0], ["2019-08-14", 0], ["2019-08-15", 0], ["2019-08-16", 0], ["2019-08-17", 0], ["2019-08-18", 0], ["2019-08-19", 0], ["2019-08-20", 0], ["2019-08-21", 0], ["2019-08-22", 0], ["2019-08-23", 0], ["2019-08-24", 0], ["2019-08-25", 0], ["2019-08-26", 0], ["2019-08-27", 0], ["2019-08-28", 0], ["2019-08-29", 0], ["2019-08-30", 0], ["2019-08-31", 0], ["2019-09-01", 0], ["2019-09-02", 0], ["2019-09-03", 0], ["2019-09-04", 0], ["2019-09-05", 0], ["2019-09-06", 0], ["2019-09-07", 0], ["2019-09-08", 0], ["2019-09-09", 0], ["2019-09-10", 0], ["2019-09-11", 0], ["2019-09-12", 0], ["2019-09-13", 0], ["2019-09-14", 0], ["2019-09-15", 0], ["2019-09-16", 0], ["2019-09-17", 0], ["2019-09-18", 0], ["2019-09-19", 0], ["2019-09-20", 0], ["2019-09-21", 0], ["2019-09-22", 0], ["2019-09-23", 0], ["2019-09-24", 0], ["2019-09-25", 0], ["2019-09-26", 0], ["2019-09-27", 0], ["2019-09-28", 0], ["2019-09-29", 0], ["2019-09-30", 0], ["2019-10-01", 0], ["2019-10-02", 0], ["2019-10-03", 0], ["2019-10-04", 0], ["2019-10-05", 0], ["2019-10-06", 0], ["2019-10-07", 0], ["2019-10-08", 0], ["2019-10-09", 0], ["2019-10-10", 0], ["2019-10-11", 0], ["2019-10-12", 0], ["2019-10-13", 0], ["2019-10-14", 0], ["2019-10-15", 0], ["2019-10-16", 1], ["2019-10-17", 0], ["2019-10-18", 0], ["2019-10-19", 0], ["2019-10-20", 0], ["2019-10-21", 0], ["2019-10-22", 0], ["2019-10-23", 0], ["2019-10-24", 1], ["2019-10-25", 0], ["2019-10-26", 0], ["2019-10-27", 0], ["2019-10-28", 0], ["2019-10-29", 0], ["2019-10-30", 0], ["2019-10-31", 0], ["2019-11-01", 0], ["2019-11-02", 0], ["2019-11-03", 0], ["2019-11-04", 0], ["2019-11-05", 0], ["2019-11-06", 0], ["2019-11-07", 0], ["2019-11-08", 0], ["2019-11-09", 0], ["2019-11-10", 0], ["2019-11-11", 0], ["2019-11-12", 0], ["2019-11-13", 0], ["2019-11-14", 0], ["2019-11-15", 0], ["2019-11-16", 0], ["2019-11-17", 0], ["2019-11-18", 0], ["2019-11-19", 0], ["2019-11-20", 0], ["2019-11-21", 0], ["2019-11-22", 0], ["2019-11-23", 0], ["2019-11-24", 0], ["2019-11-25", 0], ["2019-11-26", 0], ["2019-11-27", 0], ["2019-11-28", 0], ["2019-11-29", 0], ["2019-11-30", 0], ["2019-12-01", 0], ["2019-12-02", 0], ["2019-12-03", 0], ["2019-12-04", 0], ["2019-12-05", 0], ["2019-12-06", 0], ["2019-12-07", 0], ["2019-12-08", 0], ["2019-12-09", 0], ["2019-12-10", 0], ["2019-12-11", 0], ["2019-12-12", 0], ["2019-12-13", 0], ["2019-12-14", 0], ["2019-12-15", 0], ["2019-12-16", 1], ["2019-12-17", 0], ["2019-12-18", 0], ["2019-12-19", 0], ["2019-12-20", 0], ["2019-12-21", 0], ["2019-12-22", 0], ["2019-12-23", 0], ["2019-12-24", 0], ["2019-12-25", 0], ["2019-12-26", 0], ["2019-12-27", 0], ["2019-12-28", 0], ["2019-12-29", 0], ["2019-12-30", 0], ["2019-12-31", 0], ["2020-01-01", 0], ["2020-01-02", 0], ["2020-01-03", 0], ["2020-01-04", 0], ["2020-01-05", 0], ["2020-01-06", 0], ["2020-01-07", 0], ["2020-01-08", 0], ["2020-01-09", 0], ["2020-01-10", 0], ["2020-01-11", 0], ["2020-01-12", 0], ["2020-01-13", 0], ["2020-01-14", 0], ["2020-01-15", 0], ["2020-01-16", 0], ["2020-01-17", 0], ["2020-01-18", 0], ["2020-01-19", 0], ["2020-01-20", 0], ["2020-01-21", 0], ["2020-01-22", 0], ["2020-01-23", 0], ["2020-01-24", 0], ["2020-01-25", 0], ["2020-01-26", 0], ["2020-01-27", 0], ["2020-01-28", 0], ["2020-01-29", 0], ["2020-01-30", 0], ["2020-01-31", 0], ["2020-02-01", 0], ["2020-02-02", 0], ["2020-02-03", 0], ["2020-02-04", 0], ["2020-02-05", 0], ["2020-02-06", 0], ["2020-02-07", 0], ["2020-02-08", 0], ["2020-02-09", 0], ["2020-02-10", 0], ["2020-02-11", 0], ["2020-02-12", 0], ["2020-02-13", 0], ["2020-02-14", 0], ["2020-02-15", 0], ["2020-02-16", 0], ["2020-02-17", 0], ["2020-02-18", 0], ["2020-02-19", 1], ["2020-02-20", 0], ["2020-02-21", 1], ["2020-02-22", 0], ["2020-02-23", 0], ["2020-02-24", 0], ["2020-02-25", 0], ["2020-02-26", 0], ["2020-02-27", 0], ["2020-02-28", 0], ["2020-02-29", 0], ["2020-03-01", 0], ["2020-03-02", 0], ["2020-03-03", 0], ["2020-03-04", 0], ["2020-03-05", 0], ["2020-03-06", 0], ["2020-03-07", 0], ["2020-03-08", 0], ["2020-03-09", 0], ["2020-03-10", 0], ["2020-03-11", 0], ["2020-03-12", 2], ["2020-03-13", 0], ["2020-03-14", 0], ["2020-03-15", 0], ["2020-03-16", 0], ["2020-03-17", 0], ["2020-03-18", 0], ["2020-03-19", 0], ["2020-03-20", 0], ["2020-03-21", 0], ["2020-03-22", 0], ["2020-03-23", 0], ["2020-03-24", 0], ["2020-03-25", 0], ["2020-03-26", 0], ["2020-03-27", 0], ["2020-03-28", 0], ["2020-03-29", 0], ["2020-03-30", 0], ["2020-03-31", 0], ["2020-04-01", 0], ["2020-04-02", 0], ["2020-04-03", 0], ["2020-04-04", 0], ["2020-04-05", 0], ["2020-04-06", 0], ["2020-04-07", 0], ["2020-04-08", 0], ["2020-04-09", 0], ["2020-04-10", 0], ["2020-04-11", 0], ["2020-04-12", 0], ["2020-04-13", 0], ["2020-04-14", 0], ["2020-04-15", 0], ["2020-04-16", 0], ["2020-04-17", 0], ["2020-04-18", 0], ["2020-04-19", 0], ["2020-04-20", 0], ["2020-04-21", 0], ["2020-04-22", 0], ["2020-04-23", 0], ["2020-04-24", 0], ["2020-04-25", 0], ["2020-04-26", 0], ["2020-04-27", 0], ["2020-04-28", 0], ["2020-04-29", 0], ["2020-04-30", 0], ["2020-05-01", 0], ["2020-05-02", 0], ["2020-05-03", 0], ["2020-05-04", 0], ["2020-05-05", 0], ["2020-05-06", 0], ["2020-05-07", 0], ["2020-05-08", 0], ["2020-05-09", 0]]
-        }]
-
-    };
-
-    myChart.setOption(option);
-</script>
-
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      日语五十音</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="https://cdn.jsdelivr.net/gh/dizent/hexoCDN@1.02/img/custom/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="">Dizent</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-3-12<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
   </div>
 
-    <div id="main-part">
-      <article class="art">
-        <div class="art-main">
-          <div class="art-content">
-            <div id="archives">
-              <p style="text-align:right;">
-                [<span id="al_expand_collapse" style="cursor: s-resize;">
-                全部展开/收缩</span>
-              ]</p>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2020年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      03月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2020/03/12/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%94%E5%8D%81%E9%9F%B3/">
-                          <span style="color:#0bf;">
-                          12日09:01:00</span>
-                          日语五十音
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2020/03/12/%E5%85%8D%E8%B4%B9%E5%BD%B1%E8%A7%86%E7%AB%99%E7%82%B9%E5%88%86%E4%BA%AB/">
-                          <span style="color:#0bf;">
-                          12日09:01:00</span>
-                          免费影视站点分享
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      02月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2020/02/21/%E4%BD%BF%E7%94%A8coding%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E9%83%A8%E7%BD%B2springboot%E9%A1%B9%E7%9B%AE%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/">
-                          <span style="color:#0bf;">
-                          21日14:01:00</span>
-                          使用coding持续集成部署springboot项目到服务器
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2020/02/19/hadoop%E3%80%81hbase%E3%80%81zk%E4%BC%AA%E9%9B%86%E7%BE%A4%E6%9C%8D%E5%8A%A1%E5%8D%95%E7%8B%AC%E5%90%AF%E5%8A%A8%E5%91%BD%E4%BB%A4/">
-                          <span style="color:#0bf;">
-                          19日09:58:15</span>
-                          hadoop、hbase、zk伪集群服务单独启动命令
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2019年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      12月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2019/12/16/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">
-                          <span style="color:#0bf;">
-                          16日09:15:00</span>
-                          简单实现内网穿透
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      10月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2019/10/24/Docker%E5%AE%89%E8%A3%85Hadoop%E3%80%81Hbase%E3%80%81Zookeeper%E3%80%81Phoenix%E4%BC%AA%E9%9B%86%E7%BE%A4-1/">
-                          <span style="color:#0bf;">
-                          24日10:13:00</span>
-                          Docker安装Hadoop、Hbase、Zookeeper、Phoenix伪集群
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2019/10/16/Phoenix/">
-                          <span style="color:#0bf;">
-                          16日09:07:00</span>
-                          使用DATAX将MySQL导入Phoenix
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2018年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      12月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2018/12/12/Hexo-Theme-Sakura/">
-                          <span style="color:#0bf;">
-                          12日22:16:01</span>
-                          Hexo-Theme-Sakura
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h2 id="日语五十音"><a href="#日语五十音" class="headerlink" title="日语五十音"></a>日语五十音</h2><p>表格按照田字格形式，标注了五十音</p>
+<p>各位置分别为：</p>
+<table>
+<thead>
+<tr>
+<th>平假名</th>
+<th>片假名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>键盘输入方式</td>
+<td>罗马音</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">あ</th>
+<th style="text-align:center">ア</th>
+<th style="text-align:center">い</th>
+<th style="text-align:center">イ</th>
+<th style="text-align:center">う</th>
+<th style="text-align:center">ウ</th>
+<th style="text-align:center">え</th>
+<th style="text-align:center">エ</th>
+<th style="text-align:center">お</th>
+<th style="text-align:center">オ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">a</td>
+<td style="text-align:center">[a]</td>
+<td style="text-align:center">i</td>
+<td style="text-align:center">[i]</td>
+<td style="text-align:center">u</td>
+<td style="text-align:center">[u]</td>
+<td style="text-align:center">e</td>
+<td style="text-align:center">[e]</td>
+<td style="text-align:center">o</td>
+<td style="text-align:center">[o]</td>
+</tr>
+<tr>
+<td style="text-align:center">か</td>
+<td style="text-align:center">カ</td>
+<td style="text-align:center">き</td>
+<td style="text-align:center">キ</td>
+<td style="text-align:center">く</td>
+<td style="text-align:center">ク</td>
+<td style="text-align:center">け</td>
+<td style="text-align:center">ケ</td>
+<td style="text-align:center">こ</td>
+<td style="text-align:center">コ</td>
+</tr>
+<tr>
+<td style="text-align:center">ka</td>
+<td style="text-align:center">[ka]</td>
+<td style="text-align:center">ki</td>
+<td style="text-align:center">[ki]</td>
+<td style="text-align:center">ku</td>
+<td style="text-align:center">[ku]</td>
+<td style="text-align:center">ke</td>
+<td style="text-align:center">[ke]</td>
+<td style="text-align:center">ko</td>
+<td style="text-align:center">[ko]</td>
+</tr>
+<tr>
+<td style="text-align:center">さ</td>
+<td style="text-align:center">サ</td>
+<td style="text-align:center">し</td>
+<td style="text-align:center">シ</td>
+<td style="text-align:center">す</td>
+<td style="text-align:center">ス</td>
+<td style="text-align:center">せ</td>
+<td style="text-align:center">セ</td>
+<td style="text-align:center">そ</td>
+<td style="text-align:center">ソ</td>
+</tr>
+<tr>
+<td style="text-align:center">sa</td>
+<td style="text-align:center">[sa]</td>
+<td style="text-align:center">shi</td>
+<td style="text-align:center">[xi]</td>
+<td style="text-align:center">su</td>
+<td style="text-align:center">[su]</td>
+<td style="text-align:center">se</td>
+<td style="text-align:center">[sei]</td>
+<td style="text-align:center">so</td>
+<td style="text-align:center">[so]</td>
+</tr>
+<tr>
+<td style="text-align:center">た</td>
+<td style="text-align:center">タ</td>
+<td style="text-align:center">ち</td>
+<td style="text-align:center">チ</td>
+<td style="text-align:center">つ</td>
+<td style="text-align:center">ツ</td>
+<td style="text-align:center">て</td>
+<td style="text-align:center">テ</td>
+<td style="text-align:center">と</td>
+<td style="text-align:center">ト</td>
+</tr>
+<tr>
+<td style="text-align:center">ta</td>
+<td style="text-align:center">[ta]</td>
+<td style="text-align:center">chi</td>
+<td style="text-align:center">[qi]</td>
+<td style="text-align:center">tsu</td>
+<td style="text-align:center">[tsu]</td>
+<td style="text-align:center">te</td>
+<td style="text-align:center">[tei]</td>
+<td style="text-align:center">to</td>
+<td style="text-align:center">[to]</td>
+</tr>
+<tr>
+<td style="text-align:center">な</td>
+<td style="text-align:center">ナ</td>
+<td style="text-align:center">に</td>
+<td style="text-align:center">ニ</td>
+<td style="text-align:center">ぬ</td>
+<td style="text-align:center">ヌ</td>
+<td style="text-align:center">ね</td>
+<td style="text-align:center">ネ</td>
+<td style="text-align:center">の</td>
+<td style="text-align:center">ノ</td>
+</tr>
+<tr>
+<td style="text-align:center">na</td>
+<td style="text-align:center">[na]</td>
+<td style="text-align:center">ni</td>
+<td style="text-align:center">[ni]</td>
+<td style="text-align:center">nu</td>
+<td style="text-align:center">[nu]</td>
+<td style="text-align:center">ne</td>
+<td style="text-align:center">[nei]</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center">[no]</td>
+</tr>
+<tr>
+<td style="text-align:center">は</td>
+<td style="text-align:center">ハ</td>
+<td style="text-align:center">ひ</td>
+<td style="text-align:center">ヒ</td>
+<td style="text-align:center">ふ</td>
+<td style="text-align:center">フ</td>
+<td style="text-align:center">へ</td>
+<td style="text-align:center">ヘ</td>
+<td style="text-align:center">ほ</td>
+<td style="text-align:center">ホ</td>
+</tr>
+<tr>
+<td style="text-align:center">ha</td>
+<td style="text-align:center">[ha]</td>
+<td style="text-align:center">hi</td>
+<td style="text-align:center">[hii]</td>
+<td style="text-align:center">hu</td>
+<td style="text-align:center">[hu]</td>
+<td style="text-align:center">he</td>
+<td style="text-align:center">[hei]</td>
+<td style="text-align:center">ho</td>
+<td style="text-align:center">[o]</td>
+</tr>
+<tr>
+<td style="text-align:center">ま</td>
+<td style="text-align:center">マ</td>
+<td style="text-align:center">み</td>
+<td style="text-align:center">ミ</td>
+<td style="text-align:center">む</td>
+<td style="text-align:center">ム</td>
+<td style="text-align:center">め</td>
+<td style="text-align:center">メ</td>
+<td style="text-align:center">も</td>
+<td style="text-align:center">モ</td>
+</tr>
+<tr>
+<td style="text-align:center">ma</td>
+<td style="text-align:center">[ma]</td>
+<td style="text-align:center">mi</td>
+<td style="text-align:center">[mi]</td>
+<td style="text-align:center">mu</td>
+<td style="text-align:center">[mu]</td>
+<td style="text-align:center">me</td>
+<td style="text-align:center">[mei]</td>
+<td style="text-align:center">mo</td>
+<td style="text-align:center">[mo]</td>
+</tr>
+<tr>
+<td style="text-align:center">や</td>
+<td style="text-align:center">ヤ</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">ゆ</td>
+<td style="text-align:center">ユ</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">よ</td>
+<td style="text-align:center">ヨ</td>
+</tr>
+<tr>
+<td style="text-align:center">ya</td>
+<td style="text-align:center">[ya]</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">yu</td>
+<td style="text-align:center">[you]</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">yo</td>
+<td style="text-align:center">[yo]</td>
+</tr>
+<tr>
+<td style="text-align:center">ら</td>
+<td style="text-align:center">ラ</td>
+<td style="text-align:center">り</td>
+<td style="text-align:center">リ</td>
+<td style="text-align:center">る</td>
+<td style="text-align:center">ル</td>
+<td style="text-align:center">れ</td>
+<td style="text-align:center">レ</td>
+<td style="text-align:center">ろ</td>
+<td style="text-align:center">ロ</td>
+</tr>
+<tr>
+<td style="text-align:center">ra</td>
+<td style="text-align:center">[ra]</td>
+<td style="text-align:center">ri</td>
+<td style="text-align:center">[li]</td>
+<td style="text-align:center">ru</td>
+<td style="text-align:center">[lu]</td>
+<td style="text-align:center">re</td>
+<td style="text-align:center">[lei]</td>
+<td style="text-align:center">ro</td>
+<td style="text-align:center">[lo]</td>
+</tr>
+<tr>
+<td style="text-align:center">わ</td>
+<td style="text-align:center">ワ</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">を</td>
+<td style="text-align:center">ヲ</td>
+</tr>
+<tr>
+<td style="text-align:center">wa</td>
+<td style="text-align:center">[wa]</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">wo</td>
+<td style="text-align:center">[wo]</td>
+</tr>
+<tr>
+<td style="text-align:center">ん</td>
+<td style="text-align:center">ン</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">nn</td>
+<td style="text-align:center">[n]</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/dizent/hexoCDN@1.02/img/custom/donate/alipay.png"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/dizent/hexoCDN@1.02/img/custom/donate/wechat.png"></li>
+              </ul>
             </div>
           </div>
         </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
       </article>
-    </div>
-  </div>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2020/03/12/%E5%85%8D%E8%B4%B9%E5%BD%B1%E8%A7%86%E7%AB%99%E7%82%B9%E5%88%86%E4%BA%AB/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.8/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://imgkr.cn-bj.ufileos.com/20becc62-b4d3-4922-b56a-d208ba956c23.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://imgkr.cn-bj.ufileos.com/20becc62-b4d3-4922-b56a-d208ba956c23.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                免费影视站点分享</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "Nv0cYooTWaYfHdUS3dYdETuE-9Nh9j0Va",
+        appKey: "33VP8kFrv8KYdpvlejehAIzb",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/dizent/hexoCDN@1.02/img/custom/avatar.jpg" itemprop="image" alt="Dizent" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author">Dizent</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>    
     <div class="ins-search">
