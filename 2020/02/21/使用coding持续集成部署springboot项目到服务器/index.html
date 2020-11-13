@@ -407,7 +407,7 @@
 <li><p>进入项目<code>代码仓库</code>，复制git地址。<code>https://e.coding.net/dizent/fanli.git</code></p>
 </li>
 <li><p>进入本地项目目录，使用命令行将代码推送至仓库。</p>
-<pre><code class="shell">cd 项目目录
+<pre><code class="lang-shell">cd 项目目录
 git init
 git remote add origin https://e.coding.net/dizent/fanli.git #替换为你的仓库地址
 git add .
@@ -419,10 +419,10 @@ git push origin master
 </li>
 </ol>
 <h3 id="构建配置"><a href="#构建配置" class="headerlink" title="构建配置"></a>构建配置</h3><h4 id="新的构建计划"><a href="#新的构建计划" class="headerlink" title="新的构建计划"></a>新的构建计划</h4><ol>
-<li>选择项目左侧菜单栏<code>构建与部署</code> –&gt;<code>构建</code></li>
+<li>选择项目左侧菜单栏<code>构建与部署</code> —&gt;<code>构建</code></li>
 <li>在内容区域选择<code>新建构建配置</code></li>
 <li>输入<code>计划名称</code>，代码源选择<code>coding</code>、仓库选需要构建的仓库</li>
-<li>配置来源<code>使用静态配置的JenkinsFile</code>–&gt;<code>并行过程模板</code></li>
+<li>配置来源<code>使用静态配置的JenkinsFile</code>—&gt;<code>并行过程模板</code></li>
 <li>勾选<code>前往流程配置</code>，点击<code>保存修改</code><h4 id="流程配置"><a href="#流程配置" class="headerlink" title="流程配置"></a>流程配置</h4></li>
 <li>选择<code>文本编辑器</code></li>
 <li>配置解读</li>
@@ -435,7 +435,7 @@ git push origin master
 <h4 id="阶段配置"><a href="#阶段配置" class="headerlink" title="阶段配置"></a>阶段配置</h4><ul>
 <li><strong>检出</strong>：</li>
 </ul>
-<pre><code class="shell">  stage(&#39;检出&#39;) {
+<pre><code class="lang-shell">  stage(&#39;检出&#39;) {
         steps {
           checkout([$class: &#39;GitSCM&#39;, branches: [[name: env.GIT_BUILD_REF]], 
                   userRemoteConfigs: [[url: env.GIT_REPO_URL, credentialsId: env.CREDENTIALS_ID]]])
@@ -448,7 +448,7 @@ git push origin master
 <ul>
 <li><strong>构建</strong></li>
 </ul>
-<pre><code class="json">  stage(&#39;构建&#39;) {
+<pre><code class="lang-json">  stage(&#39;构建&#39;) {
         steps {
           echo &#39;构建中...&#39;
           sh &#39;java -version&#39;
@@ -469,7 +469,7 @@ git push origin master
 <ul>
 <li><strong>测试</strong></li>
 </ul>
-<pre><code class="json">  stage(&#39;测试&#39;) {
+<pre><code class="lang-json">  stage(&#39;测试&#39;) {
         steps {
           echo &#39;单元测试中...&#39;
           sh &#39;mvn test&#39;
@@ -483,7 +483,7 @@ git push origin master
 <ul>
 <li><strong>部署</strong></li>
 </ul>
-<pre><code class="json">  stage(&#39;部署&#39;) {
+<pre><code class="lang-json">  stage(&#39;部署&#39;) {
         steps {
           echo &#39;部署中...&#39;
           script {
@@ -512,7 +512,7 @@ git push origin master
 <li>运行服务器端的脚本<code>deploy.sh</code></li>
 <li><code>deploy.sh</code>脚本内容如下</li>
 </ol>
-<pre><code class="shell">#!/bin/sh
+<pre><code class="lang-shell">#!/bin/sh
 ## java 环境
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.232.b09-0.el7_7.x86_64
 ## jre环境
@@ -845,7 +845,7 @@ exit 0
     </div>
     <div class="github-badge">
       <span class="badge-subject">WordCount</span>
-      <span class="badge-value bg-blueviolet" target="_blank" title="全站字数">8k</span>
+      <span class="badge-value bg-blueviolet" target="_blank" title="全站字数">5.4k</span>
     </div>
   </div>
 </footer>

@@ -404,14 +404,14 @@
 <blockquote>
 <p>Hadoop /Hbase/Zookeeper/phoenix安装环境已经集成在mysaber/hadoop：0.2.2镜像中，简单配置即可。</p>
 </blockquote>
-<h4 id="拉取docker镜像"><a href="#拉取docker镜像" class="headerlink" title="拉取docker镜像"></a>拉取docker镜像</h4><pre><code class="shell">$ docker pull mysaber/hadoop:0.2.2
+<h4 id="拉取docker镜像"><a href="#拉取docker镜像" class="headerlink" title="拉取docker镜像"></a>拉取docker镜像</h4><pre><code class="lang-shell">$ docker pull mysaber/hadoop:0.2.2
 </code></pre>
-<h4 id="使用命令查看docker镜像"><a href="#使用命令查看docker镜像" class="headerlink" title="使用命令查看docker镜像"></a>使用命令查看docker镜像</h4><pre><code class="shell">$  docker images
+<h4 id="使用命令查看docker镜像"><a href="#使用命令查看docker镜像" class="headerlink" title="使用命令查看docker镜像"></a>使用命令查看docker镜像</h4><pre><code class="lang-shell">$  docker images
 REPOSITORY                                      TAG                 IMAGE ID            CREATED             SIZE
 mysaber/hadoop                                  0.2.2               89e80d91b1a5        3 days ago          4.14GB
 </code></pre>
 <p>出现对应镜像表示拉取成功。</p>
-<h4 id="配置对应的启动脚本文件“start-container-sh”"><a href="#配置对应的启动脚本文件“start-container-sh”" class="headerlink" title="配置对应的启动脚本文件“start-container.sh”"></a>配置对应的启动脚本文件“start-container.sh”</h4><pre><code class="shell">#!/bin/bash
+<h4 id="配置对应的启动脚本文件“start-container-sh”"><a href="#配置对应的启动脚本文件“start-container-sh”" class="headerlink" title="配置对应的启动脚本文件“start-container.sh”"></a>配置对应的启动脚本文件“start-container.sh”</h4><pre><code class="lang-shell">#!/bin/bash
 
 # the default node number is 3
 N=${1:-3}
@@ -460,28 +460,28 @@ done
 <h4 id="使用Kitematic查看已经启动的镜像容器，选中master。点击exec可以进入容器内部。"><a href="#使用Kitematic查看已经启动的镜像容器，选中master。点击exec可以进入容器内部。" class="headerlink" title="使用Kitematic查看已经启动的镜像容器，选中master。点击exec可以进入容器内部。"></a>使用Kitematic查看已经启动的镜像容器，选中master。点击exec可以进入容器内部。</h4><p><img src="https://cdn.jsdelivr.net/gh/dizent/dizent.github.io@1.1/images/kitematic.png" alt="image-20191024093325950"></p>
 <blockquote>
 <p>如果没有安装Kitematic，则可以使用下面命令登陆容器内部：</p>
-<pre><code class="shell">$ docker ps -a
+<pre><code class="lang-shell">$ docker ps -a
 CONTAINER ID        IMAGE                  COMMAND             CREATED             STATUS              PORTS                                                                                                                                                                                      NAMES
 2c6e954fd7a0        mysaber/hadoop:0.2.2   &quot;/bin/bash&quot;         37 minutes ago      Up 37 minutes       8081/tcp, 8088/tcp, 8765/tcp, 50070/tcp, 60010/tcp, 0.0.0.0:2183-&gt;2181/tcp                                                                                                                 slave2
 88deb95f7195        mysaber/hadoop:0.2.2   &quot;/bin/bash&quot;         37 minutes ago      Up 37 minutes       8081/tcp, 8088/tcp, 8765/tcp, 50070/tcp, 60010/tcp, 0.0.0.0:2182-&gt;2181/tcp                                                                                                                 slave1
 cd06942e2c58        mysaber/hadoop:0.2.2   &quot;/bin/bash&quot;         37 minutes ago      Up 37 minutes       0.0.0.0:2181-&gt;2181/tcp, 0.0.0.0:8088-&gt;8088/tcp, 0.0.0.0:8765-&gt;8765/tcp, 0.0.0.0:16000-&gt;16000/tcp, 0.0.0.0:16020-&gt;16020/tcp, 0.0.0.0:50070-&gt;50070/tcp, 0.0.0.0:60010-&gt;60010/tcp, 8081/tcp   master
 </code></pre>
 <p>查看容器对应的container id</p>
-<pre><code class="shell">$ docker exec -it cd06942e2c58 /bin/bash
-[root@master /]# 
+<pre><code class="lang-shell">$ docker exec -it cd06942e2c58 /bin/bash
+[root@master /]#
 </code></pre>
 <p>出现以上结果表明正确进入容器内部。</p>
 </blockquote>
-<h4 id="在master容器中，修改hbase配置文件："><a href="#在master容器中，修改hbase配置文件：" class="headerlink" title="在master容器中，修改hbase配置文件："></a>在master容器中，修改hbase配置文件：</h4><pre><code class="shell">[root@master /]# vim  /opt/hbase/conf/hbase-site.xml
+<h4 id="在master容器中，修改hbase配置文件："><a href="#在master容器中，修改hbase配置文件：" class="headerlink" title="在master容器中，修改hbase配置文件："></a>在master容器中，修改hbase配置文件：</h4><pre><code class="lang-shell">[root@master /]# vim  /opt/hbase/conf/hbase-site.xml
 </code></pre>
 <p>在其中加入下面配置：(在标签<code>&lt;configuration&gt;&lt;/configuration&gt;</code>中，与其他property同级)</p>
-<pre><code class="xml">&lt;property&gt;
+<pre><code class="lang-xml">&lt;property&gt;
         &lt;name&gt;fs.default.name&lt;/name&gt;
         &lt;value&gt;hdfs://master:9000&lt;/value&gt;
 &lt;/property&gt;
 </code></pre>
 <p>在${localPath}新建编辑脚本文件<code>start-all.sh</code>：（或在/opt/docker目录下执行 vim start-all.sh)</p>
-<pre><code class="shell">#!/bin/bash
+<pre><code class="lang-shell">#!/bin/bash
 
 echo &quot;开始启动master。。。&quot;
 
@@ -547,10 +547,9 @@ wait
 echo &quot;hbase启动完成！&quot;
 
 sh /opt/hbase/bin/hbase shell
-
 </code></pre>
 <p>切换到master容器，执行命令：</p>
-<pre><code class="shell">sh-4.2# cd /opt/docker/
+<pre><code class="lang-shell">sh-4.2# cd /opt/docker/
 sh-4.2# sh start-all.sh
 ...
 
@@ -565,7 +564,7 @@ Took 0.0032 seconds
 hbase(main):001:0&gt;
 </code></pre>
 <p>出现以上结果，表示hadoop、zookeeper、hbase集群已经启动完成。可以再hbase中进行验证：</p>
-<pre><code class="shell">hbase(main):001:0&gt; list
+<pre><code class="lang-shell">hbase(main):001:0&gt; list
 TABLE
 0 row(s)
 Took 0.6531 seconds
@@ -578,7 +577,7 @@ Took 0.9004 seconds
 <p>成功执行以上两条命令，表明hbase的查询和创建表都是正常的，如果出现问题的话，可以查看/opt/hbase/logs/中对应的log文件抛出的异常来进行排查。</p>
 <blockquote>
 <p>从服务列表中排查是否出错：在master中通过命令查询当前容器启动的服务列表：</p>
-<pre><code class="shell">## 执行jps命令
+<pre><code class="lang-shell">## 执行jps命令
 sh-4.2# jps
 896 SecondaryNameNode————hadoop的secondaryNameNode服务
 1507 HMaster————hbase的Hmaster服务
@@ -589,7 +588,7 @@ sh-4.2# jps
 2094 Jps
 </code></pre>
 <p>如果上述6个服务都启动成功，表明master中的服务正常。切换到slave中继续查看</p>
-<pre><code class="shell">## 切换到slave1容器，可同理切换到slave2容器
+<pre><code class="lang-shell">## 切换到slave1容器，可同理切换到slave2容器
 sh-4.2# ssh slave1
 Last login: Tue Oct  8 09:22:02 2019 from master
 ## 执行jps命令
@@ -603,13 +602,13 @@ Last login: Tue Oct  8 09:22:02 2019 from master
 <p>slave1和slave2中的服务应该相同，如果出现缺少某服务的情况，可在对应容器中，cd到对应服务的目录下/opt/hadoop|hbase|zookeeper的logs目录中查看对应服务的启动运行日志。</p>
 </blockquote>
 <h4 id="配置Phoenix"><a href="#配置Phoenix" class="headerlink" title="配置Phoenix"></a>配置Phoenix</h4><p>切换到master容器，进入phoenix目录：</p>
-<pre><code class="shell">[root@slave1 ~]# ssh master
+<pre><code class="lang-shell">[root@slave1 ~]# ssh master
 Last login: Tue Oct  8 09:22:02 2019 from master
 [root@master ~]# cd /opt/phoenix/bin/
 [root@master bin]#
 </code></pre>
 <p>启动phoenix的queryserver：</p>
-<pre><code class="shell">[root@master bin]# ./queryserver.py start
+<pre><code class="lang-shell">[root@master bin]# ./queryserver.py start
 starting Query Server, logging to /tmp/phoenix/phoenix-root-queryserver.log
 ## 检查queryserver是否已经启动
 [root@master bin]# jps
@@ -623,7 +622,7 @@ starting Query Server, logging to /tmp/phoenix/phoenix-root-queryserver.log
 652 NameNode
 </code></pre>
 <h4 id="phoenix命令行"><a href="#phoenix命令行" class="headerlink" title="phoenix命令行"></a>phoenix命令行</h4><p>phoenix也提供了一个类似于MySQL的命令行的工具，在phoenix的bin目录下执行：</p>
-<pre><code class="shell">[root@master bin]# ./sqlline.py
+<pre><code class="lang-shell">[root@master bin]# ./sqlline.py
 Setting property: [incremental, false]
 Setting property: [isolation, TRANSACTION_READ_COMMITTED]
 issuing: !connect jdbc:phoenix: none none org.apache.phoenix.jdbc.PhoenixDriver
@@ -644,7 +643,7 @@ sqlline version 1.2.0
 0: jdbc:phoenix:&gt;
 </code></pre>
 <p>出现上述结果表示成功进入phoenix，可以尝试执行创建表格（创建表格注意事项，在下方有提及）</p>
-<pre><code class="shell">0: jdbc:phoenix:&gt; create table visit_details (
+<pre><code class="lang-shell">0: jdbc:phoenix:&gt; create table visit_details (
         inc_id varchar(32) not null,
         area_code varchar(32)  ,
         area_name varchar(32)  ,
@@ -669,11 +668,11 @@ sqlline version 1.2.0
 );
 </code></pre>
 <p>phoenix的表格默认为全局索引，在本docker镜像中已经配置了对应的耳机索引，可通过下方命令创建索引：</p>
-<pre><code class="shell">0: jdbc:phoenix:&gt; create index op_index on visit_details(operate_at);
+<pre><code class="lang-shell">0: jdbc:phoenix:&gt; create index op_index on visit_details(operate_at);
 No rows affected (5.957 seconds)
 </code></pre>
 <p>通过!table命令查看表格以及索引：</p>
-<pre><code class="shell">0: jdbc:phoenix:&gt; !table
+<pre><code class="lang-shell">0: jdbc:phoenix:&gt; !table
 +------------+--------------+----------------+---------------+----------+------------+----------------------------+-----------------+--------------+-----------------+---------------+---------------+-----------------+------------+-------------+----------------+--+
 | TABLE_CAT  | TABLE_SCHEM  |   TABLE_NAME   |  TABLE_TYPE   | REMARKS  | TYPE_NAME  | SELF_REFERENCING_COL_NAME  | REF_GENERATION  | INDEX_STATE  | IMMUTABLE_ROWS  | SALT_BUCKETS  | MULTI_TENANT  | VIEW_STATEMENT  | VIEW_TYPE  | INDEX_TYPE  | TRANSACTIONAL  |  |
 +------------+--------------+----------------+---------------+----------+------------+----------------------------+-----------------+--------------+-----------------+---------------+---------------+-----------------+------------+-------------+----------------+--+
@@ -894,7 +893,7 @@ No rows affected (5.957 seconds)
     </div>
     <div class="github-badge">
       <span class="badge-subject">WordCount</span>
-      <span class="badge-value bg-blueviolet" target="_blank" title="全站字数">8k</span>
+      <span class="badge-value bg-blueviolet" target="_blank" title="全站字数">5.4k</span>
     </div>
   </div>
 </footer>
