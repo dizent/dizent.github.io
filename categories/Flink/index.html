@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">分类 | Dizent</title>
+  <title itemprop="name">Category: Flink | Dizent</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -355,19 +355,18 @@
 <div class="pattern-center-blank"></div>
 <div class="pattern-center ">
   <div class="pattern-attachment-img">
-    <img data-src="https://cdn.jsdelivr.net/gh/dizent/dizent.github.io@1.1/images/background1.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+    <img data-src="Flink.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
   </div>
   <header class="pattern-header ">
-    <h1 class="cat-title">分类</h1>
+    <h1 class="cat-title">Flink.zh</h1>
     <span class="cat-des">
-      <p>Categories</p>
+      <p>Flink.en</p>
     </span>
   </header>
 </div>
 
-
-<main class="content">
-
+<div id="content" class="site-content">
+  
   
 
 <div id="category-cloud" class="container chip-container">
@@ -391,7 +390,7 @@
                 
                 <a href="/categories/Flink/" title="Flink: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
+                             chip-active "
                             style="background-color: #F5EEF8;">Flink
                         <span class="tag-length">1</span>
                     </span>
@@ -421,68 +420,52 @@
     </div>
 </div>
 
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      
+  <!-- 首页默认取最最新文章集 -->
   
-  <style type="text/css">
-    #category-radar {
-        width: 100%;
-        height: 360px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="category-radar" class="card-content"></div>
+    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <div class="post-entry">
+    <div class="feature">
+      <a href="/2020/05/27/Flink%E5%85%A5%E9%97%A8-%E7%AE%80%E4%BB%8B/">
+        <div class="overlay">
+          <i class="iconfont icon-text">
+          </i>
+        </div>
+        <img width="150" height="150" src="https://flink.apache.org/img/flink-header-logo.svg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
+      </a>
     </div>
+    <h1 class="entry-title">
+    <a href="/2020/05/27/Flink%E5%85%A5%E9%97%A8-%E7%AE%80%E4%BB%8B/">
+    Flink入门-简介</a>
+    </h1>
+    <div class="p-time">
+      <i class="iconfont icon-time">
+      </i>
+    2020-5-27</div>
+    <p>
+    </p>
+    <footer class="entry-footer">
+      <div class="post-more">
+        <a href="/2020/05/27/Flink%E5%85%A5%E9%97%A8-%E7%AE%80%E4%BB%8B/">
+          <i class="iconfont icon-caidan">
+          </i>
+        </a>
+      </div>
+    </footer>
+  </div>
+  <hr>
+</article>
+  
+
+
+      <div class="clearer">
+      </div>
+    </main>
+    
+  </div>
 </div>
-<script type="text/javascript" src="/js/echarts.min.js"></script>
-<script type="text/javascript">
-    let radarChart = echarts.init(document.getElementById('category-radar'));
-
-    
-
-    let option = {
-        title: {
-            left: 'center',
-            text: '文章分类雷达图',
-            textStyle: {
-                fontWeight: 500,
-                fontSize: 22
-            }
-        },
-        tooltip: {},
-        radar: {
-            name: {
-                textStyle: {
-                    color: '#3C4858'
-                }
-            },
-            indicator: [{"name":"大数据","max":3},{"name":"Flink","max":3},{"name":"中间件","max":3},{"name":"技术","max":3}],
-            nameGap: 5,
-            center: ['50%','55%'],
-            radius: '66%'
-        },
-        series: [{
-            type: 'radar',
-            color: ['#3ecf8e'],
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data : [
-                {
-                    value : [2,1,1,2],
-                    name : 'categoryNumber'
-                }
-            ]
-        }]
-    };
-
-    radarChart.setOption(option);
-</script>
-
-    
-
-
-</main>
-
-
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>

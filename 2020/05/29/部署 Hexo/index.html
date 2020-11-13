@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">分类 | Dizent</title>
+  <title itemprop="name">部署 Hexo | Dizent</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -350,137 +350,215 @@
   </div>
 </header>
 
-      
-
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img data-src="https://cdn.jsdelivr.net/gh/dizent/dizent.github.io@1.1/images/background1.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
-  </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">分类</h1>
-    <span class="cat-des">
-      <p>Categories</p>
-    </span>
-  </header>
-</div>
 
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+          <header class="entry-header">
+            <h1 class="entry-title">部署 Hexo</h1>
+            <p class="entry-census">&nbsp;·&nbsp;2020-5-29&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
 
-<main class="content">
+            <hr>
+          </header>
+        
+        <div class="entry-content">
+          <h1 id="部署-Hexo"><a href="#部署-Hexo" class="headerlink" title="部署 Hexo"></a>部署 Hexo</h1><h2 id="部署到-GitHub"><a href="#部署到-GitHub" class="headerlink" title="部署到 GitHub"></a>部署到 GitHub</h2><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="#准备工作"></a>#准备工作</h2><p>如果没有账号，请点此前往 GitHub 注册一个 GitHub 账号。</p>
+<p>新建一个公开仓库，仓库名格式为 your_username.github.io 例如你的 GitHub 用户名是 easyhexo ，那么你的仓库地址名称就应该是 easyhexo.github.io</p>
+<p>创建完成后记下该仓库的 HTTPS/SSH 地址，一般格式为 <a href="https://github.com/your_username/your_reponame.git" target="_blank" rel="noopener">https://github.com/your_username/your_reponame.git</a> 在下一步会用到。</p>
+<h3 id="安装部署插件"><a href="#安装部署插件" class="headerlink" title="安装部署插件"></a>安装部署插件</h3><pre><code>$ npm install hexo-deployer-git --save
+$ npm install hexo-server --save
+</code></pre><h3 id="配置-Git"><a href="#配置-Git" class="headerlink" title="配置 Git"></a>配置 Git</h3><p>如果你只是安装好了 Git 但没有配置过你的 Git ，那么现在需要做的第一件事情就是设置你的 Git 用户名和邮箱。 在 Git Bash 中执行以下两条命令配置你的用户名和邮箱，这里建议用户名和邮箱与你的 GitHub 用户名和邮箱保持一致。</p>
+<pre><code>$ git config --global user.name &quot;Your_user_name&quot;
+$ git config --global user.email Your_email@example.com
+</code></pre><blockquote>
+<p>提醒</p>
+<p>每次 Git 提交时都会附带这两条信息，用于记录是谁提交的更新，并且会随更新内容一起被记录到历史记录中。简单说，是用来标记的你的身份的～</p>
+</blockquote>
+<h3 id="配置站点-config-yml-文件"><a href="#配置站点-config-yml-文件" class="headerlink" title="配置站点 _config.yml 文件"></a>配置站点 _config.yml 文件</h3><pre><code>deploy:
+  type: git # 类型填git
+  repo: &lt;repository url&gt; # 你的Github仓库地址
+  branch: master # 分支名称。默认填写 master 如果您使用的是 GitHub ，程序会尝试自动检测。
+  message: # 提交信息可以自定义，不填的则默认为提交时间
+</code></pre><h3 id="发布到-GitHub"><a href="#发布到-GitHub" class="headerlink" title="发布到 GitHub"></a>发布到 GitHub</h3><p>在本地的 Hexo 站点根目录下，执行如下命令即可部署到 GitHub Pages 上。</p>
+<pre><code>$ hexo clean &amp;&amp; hexo d -g
+</code></pre><blockquote>
+<p>提醒</p>
+<p>如果是第一次使用，会弹出一个登录框，需要登录你的 GitHub 账号。</p>
+</blockquote>
+<h2 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名</h2><p>如果你拥有个人域名，请用 A 记录解析到以下 IP 中的任意一个。如果使用 CNAME 请解析到你的 GitHub 仓库名称。</p>
+<ul>
+<li>185.199.108.153</li>
+<li>185.199.109.153</li>
+<li>185.199.110.153</li>
+<li>185.199.111.153</li>
+</ul>
+<p><strong>参考表格</strong></p>
+<table>
+<thead>
+<tr>
+<th>记录类型</th>
+<th>主机记录</th>
+<th>解析路线</th>
+<th>记录值</th>
+<th>MAX 优先级</th>
+<th>TTL（秒）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>@</td>
+<td>默认</td>
+<td>185.199.110.153</td>
+<td>-</td>
+<td>600</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>@</td>
+<td>默认</td>
+<td>GitHub博客仓库名称</td>
+<td>-</td>
+<td>600</td>
+</tr>
+</tbody>
+</table>
+<p>打开仓库设置，找到 GitHub Pages 项目，修改 Custom domain 选项的值为你的自定义域名（不带 http 等前缀）</p>
+<p>勾选 Custom domain 选项下的 Enforce HTTPS 选项，强制开启 Https 。如果遇到 Enforce HTTPS 选项无法打开，可以稍等一会儿再尝试。</p>
+<blockquote>
+<p>提醒</p>
+<p>同时需要在本地的 source 目录新建一个 CNAME 文件，内容为你的自定义域名（不带 http 等前缀）。否则无法使用自定义域名功能（ hexo d 生成的文件没有 CNAME 文件，导致仓库的自定域名设置失效）</p>
+</blockquote>
 
-  
-
-<div id="category-cloud" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-            </br>
-            </div>
-            <div class="tag-chips">
-                
-                
-                
-                <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" title="大数据: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">大数据
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Flink/" title="Flink: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">Flink
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="中间件: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">中间件
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E6%8A%80%E6%9C%AF/" title="技术: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #E8F8F5;">技术
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-            </div>
         </div>
-    </div>
-</div>
-
-  
-  <style type="text/css">
-    #category-radar {
-        width: 100%;
-        height: 360px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="category-radar" class="card-content"></div>
-    </div>
-</div>
-<script type="text/javascript" src="/js/echarts.min.js"></script>
-<script type="text/javascript">
-    let radarChart = echarts.init(document.getElementById('category-radar'));
-
-    
-
-    let option = {
-        title: {
-            left: 'center',
-            text: '文章分类雷达图',
-            textStyle: {
-                fontWeight: 500,
-                fontSize: 22
-            }
-        },
-        tooltip: {},
-        radar: {
-            name: {
-                textStyle: {
-                    color: '#3C4858'
-                }
-            },
-            indicator: [{"name":"大数据","max":3},{"name":"Flink","max":3},{"name":"中间件","max":3},{"name":"技术","max":3}],
-            nameGap: 5,
-            center: ['50%','55%'],
-            radius: '66%'
-        },
-        series: [{
-            type: 'radar',
-            color: ['#3ecf8e'],
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data : [
-                {
-                    value : [2,1,1,2],
-                    name : 'categoryNumber'
-                }
-            ]
-        }]
-    };
-
-    radarChart.setOption(option);
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/dizent/hexoCDN@1.02/img/custom/donate/alipay.png"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/dizent/hexoCDN@1.02/img/custom/donate/wechat.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2020/06/11/%E6%B5%8B%E8%AF%95/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.8/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                测试</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2020/05/27/Flink%E5%85%A5%E9%97%A8-%E7%AE%80%E4%BB%8B/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.8/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://flink.apache.org/img/flink-header-logo.svg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://flink.apache.org/img/flink-header-logo.svg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Flink入门-简介</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "Nv0cYooTWaYfHdUS3dYdETuE-9Nh9j0Va",
+        appKey: "33VP8kFrv8KYdpvlejehAIzb",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ...",
+        visitor: true,
+        // 设置Bilibili表情包地址
+        emojiCDN: '//i0.hdslb.com/bfs/emote/', 
+        // 表情title和图片映射
+        emojiMaps: {
+            "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
+            "tv_亲亲": "a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
+            "tv_偷笑": "bb690d4107620f1c15cff29509db529a73aee261.png",
+            "tv_再见": "180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png",
+            "tv_冷漠": "b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png",
+            "tv_发怒": "34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png",
+            "tv_发财": "34db290afd2963723c6eb3c4560667db7253a21a.png",
+            "tv_可爱": "9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png",
+            "tv_吐血": "09dd16a7aa59b77baa1155d47484409624470c77.png",
+            "tv_呆": "fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png",
+            "tv_呕吐": "9f996894a39e282ccf5e66856af49483f81870f3.png",
+            "tv_困": "241ee304e44c0af029adceb294399391e4737ef2.png",
+            "tv_坏笑": "1f0b87f731a671079842116e0991c91c2c88645a.png",
+            "tv_大佬": "093c1e2c490161aca397afc45573c877cdead616.png",
+            "tv_大哭": "23269aeb35f99daee28dda129676f6e9ea87934f.png",
+            "tv_委屈": "d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png",
+            "tv_害羞": "a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png",
+            "tv_尴尬": "7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png",
+            "tv_微笑": "70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png",
+            "tv_思考": "90cf159733e558137ed20aa04d09964436f618a1.png",
+            "tv_惊吓": "0d15c7e2ee58e935adc6a7193ee042388adc22af.png"
+      }
+    })
+  }
 </script>
 
-    
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/dizent/hexoCDN@1.02/img/custom/avatar.jpg" itemprop="image" alt="" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author"></a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
 
-
-</main>
 
 
     </div>    
